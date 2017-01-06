@@ -1,6 +1,6 @@
 // #include <iostream>
 /*
-** Without considering starting space or more than one space
+** Leaving the extra call to reverse when more than one spaces are there
 **
 */
 
@@ -46,7 +46,7 @@ void reverse_words(char* arr)
 int main(int argc, char const *argv[])
 {
 	
-	char arr[] = "Ravi Prakash Giri";
+	char arr[] = "  Ravi      Prakash Giri";
 	cout<< "before reversal:"<<arr<<endl;
 	reverse_words(arr);
 	cout<< "after reversal:"<<arr<<endl;
