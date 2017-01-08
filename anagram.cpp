@@ -36,7 +36,7 @@ int main(int argc, char const *argv[])
 
 	bool res = anagram(str1, str2);
 
-	res?cout<<"It's an Anagram":cout<<"Not an Anagram:";
+	res?cout<<"It's an Anagram"<<endl:cout<<"Not an Anagram:"<<endl;
 
 	return 0;
 }
