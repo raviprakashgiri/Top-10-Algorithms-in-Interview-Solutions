@@ -5,17 +5,42 @@
 
 using namespace std;
 
-long long power(int x, int y)
+float power(float x, int y)
 {
-	long long int temp;
-	if (y == 0)
-		return 1;
-	temp = power(x, y/2);
+	/* For positive integers only */
 
+	// long long int temp;
+	// if (y == 0)
+	// 	return 1;
+	// temp = power(x, y/2);
+
+	// if (y % 2 == 0)
+	// 	return temp*temp;
+	// else
+	// 	return x*temp*temp;
+
+	/* For Float and negative numbers */
+
+	float temp;
+	if (y == 0)
+	{
+		return 1;
+	}
+	temp = power(x , y/2);
+	
 	if (y % 2 == 0)
-		return temp*temp;
+	{
+		return temp * temp;
+	}
 	else
-		return x*temp*temp;
+	{
+		if (y > 0)
+		{
+			return x * temp * temp;
+		}
+		else
+			return (temp * temp) / x;
+	}
 
 
 }
